@@ -7,6 +7,7 @@
         <link rel="stylesheet/less" type="text/less" href="common.less" />
         <title>Document</title>
         <link rel="stylesheet/less" type="text/less" href="style.less" />
+        <link rel="stylesheet/less" type="text/less" href="media.less" />
         <!-- Скрипты не трогать -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
@@ -63,7 +64,7 @@
             <div class="container">
                 <div class="about_wrapper">
                     <div class="left_block">
-                        <img class="realBubble" src="img/realBubble.png" alt="">
+                        <!-- <img class="realBubble" src="img/realBubble.png" alt=""> -->
                         <div class="top_block">
                             <div class="subtitleAbout">
                                 <hr><span class="subtitle">Большой выбор, быстрые доставки, безопасные сделки</span>
@@ -181,7 +182,7 @@
         </div>
         <div class="bonus">
             <div class="container">
-                <h2 class="title">Ассоциация предпринимателей</h2>
+                <h2 class="title">Бонусная программа Nadis</h2>
                 <h3 class="subtitle">Мы придумали как можно быть полезным друг другу!</h3>
                     <div class="wrapper">
                         <div class="left_block">
@@ -219,24 +220,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
-                </div>
-                <div class="informAccordion">
-                    <div class="informItem">
-                        <div class="informAtr">
-                            <span class="informName greyColor">Как зарегистрироваться на маркетплейсе?</span>
-                        </div>
-                        <div class="informAtr">
-                            <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.01229 9.1622e-08C5.74707 8.84593e-08 5.49272 0.100096 5.30518 0.27827C5.11765 0.456443 5.01229 0.698099 5.01229 0.950074L5.01229 15.7578L1.71929 12.6293C1.62704 12.5386 1.5167 12.4662 1.39469 12.4164C1.27269 12.3666 1.14147 12.3404 1.00869 12.3393C0.87591 12.3382 0.744232 12.3623 0.621336 12.41C0.498439 12.4578 0.386787 12.5284 0.292894 12.6176C0.199001 12.7068 0.124747 12.8128 0.0744665 12.9296C0.0241857 13.0464 -0.00111584 13.1715 3.79766e-05 13.2976C0.00119179 13.4238 0.028779 13.5484 0.081188 13.6643C0.133597 13.7803 0.209778 13.8851 0.305288 13.9727L5.30459 18.7225C5.49263 18.9002 5.74706 19 6.01229 19C6.27751 19 6.53195 18.9002 6.71999 18.7225L11.7193 13.9727C11.9014 13.7936 12.0022 13.5536 12 13.3045C11.9977 13.0553 11.8925 12.8171 11.7071 12.6409C11.5217 12.4648 11.2709 12.3648 11.0087 12.3627C10.7465 12.3605 10.4939 12.4563 10.3053 12.6293L7.01229 15.7578L7.01229 0.950074C7.01229 0.698099 6.90693 0.456443 6.7194 0.27827C6.53186 0.100096 6.27751 9.47847e-08 6.01229 9.1622e-08Z" fill="#858585"/>
-                            </svg>                         
-                        </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
-                        <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
@@ -249,9 +235,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
+                    </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
@@ -264,9 +250,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
+                    </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
@@ -279,9 +265,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
+                    </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
@@ -294,9 +280,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
+                    </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
@@ -309,9 +295,9 @@
                             </svg>                         
                         </div>
                     </div>
-                    <span class="disclosure" style="display: none;">
+                    <div class="disclosure" style="display: none;">
                         <span>Регистрация на маркетплейсе обычно проста и понятна. Вам нужно будет предоставить некоторую базовую информацию о себе, такую как имя, адрес и контактные данные. После этого вы получите учетные данные для входа в свою учетную запись.</span>
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>

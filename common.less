@@ -248,6 +248,12 @@ p.error {
   width: calc(100% - 200px);
   margin: 0 auto;
   height: inherit;
+  @media  (max-width:1440px) {
+    width: calc(100% - 100px);
+  }
+  @media (max-width:1000px) {
+    width: calc(100% - 80px);
+  }
 }
 .containerLow{
   width: calc(100% - 100px);
@@ -274,6 +280,8 @@ p.error {
   font-weight: 700;
   text-transform: uppercase;
   width: fit-content;
+  outline: none;
+  border: none;
 }
 .btn-type1{
   background-color: @common-color1;
@@ -283,4 +291,6 @@ p.error {
   font-weight: 700;
   text-transform: uppercase;
   width: fit-content;
+  outline: none;
+  border: none;
 }
