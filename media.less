@@ -173,12 +173,59 @@
         .main{
             .nav{
                 .left_content{
+                    z-index: 4;
                     ul{
                         display: none;
                     }
                 }
                 .btn-type2{
                     display: none;
+                }
+                .right_content{
+                    .open_close-btn{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 5px;
+                        position: relative;
+                        z-index: 4;
+                        width: 20px;
+                        height: 20px;
+                        filter: invert(0);
+                        .line{
+                            width: 24px;
+                            height: 3px;
+                            background-color: #ffffff;
+                            transition: 0.5s all ease;
+                        }
+                        .short_line{
+                            width: 20px;
+                        }
+                    }
+                    .mobile_main{
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100vh;
+                        background-color: #E7FE55;
+                        z-index: 3;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 28px;
+                            li{
+                                font-weight: 600;
+                                text-align: center;
+                                font-size: 24px;
+                                color: #161716;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -410,6 +457,7 @@
                 }
                 .left_block{
                     .top_block{
+                        margin-top: 40px;
                         h1{
                             font-size: 96px;
                         }

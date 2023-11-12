@@ -294,3 +294,28 @@ p.error {
   outline: none;
   border: none;
 }
+.hide{
+  display: none !important;
+}
+.filter_invert{
+  filter: invert(1) !important;
+  .line{
+    &:nth-child(1){
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+        position: absolute;
+    }
+    &:nth-child(2){
+        transform: scale(0);
+    }
+    &:nth-child(3){
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+        position: absolute;
+    }
+  }
+  .logo{
+    img{
+      transition: 0.5s all ease;
+      filter: grayscale(1) !important;
+    }
+  }
+}
