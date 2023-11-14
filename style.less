@@ -18,13 +18,17 @@
                 .logo{
                     display: flex;
                     align-items: center;
-                    gap: 15px;
-                    img{
-                        transition: 0.5s all ease;
-                    }
-                    span{
-                        font-size: 32px;
-                        font-weight: bold;
+                    a{
+                        gap: 15px;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            transition: 0.5s all ease;
+                        }
+                        span{
+                            font-size: 32px;
+                            font-weight: bold;
+                        }
                     }
                 }
                 ul{
@@ -206,6 +210,50 @@
                     margin-top: 50px;
                 }
 
+
+            }
+            .center_content{
+                h2{
+                    font-size: 64px;
+                    font-weight: 700;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+                ul{
+                    margin-top: 20px;
+                    li{
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                        margin-left: 25px;
+                        font-weight: 700;
+                        text-indent: -20px;
+                        &::before{
+                            content: '';
+                            background-image: url(http://127.0.0.1:5500/img/real.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            width: 17px;
+                            height: 17px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 40px;
+                    font-weight: 700;
+                    margin-top: 50px;
+                }
+                .title_ul{
+                    font-weight: 700;
+                    margin-top: 50px;
+                }
+                .market{
+                    margin-top: 20px;
+                }
 
             }
         }
@@ -853,10 +901,14 @@
             .logo{
                 display: flex;
                 align-items: center;
-                gap: 15px;
-                span{
-                    font-size: 32px;
-                    font-weight: bold;
+                a{
+                    gap: 15px;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
                 }
             }
             .age{

@@ -501,10 +501,15 @@
                 flex-direction: column;
                 height: auto;
                 .right_block{
+                    animation: right_block 6s forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                    transform: translateX(1000px);
+                    position: absolute;
                     .app_img{
                         animation: none !important;
                         box-shadow: none;
-                        width: 100%;
+                        width: 300px;
                         margin-bottom: 20px;
                     }
                     .rectangle_place, .basket_img{
@@ -512,8 +517,12 @@
                     }
                 }
                 .left_block{
+                    animation: left_block 2s forwards;
+                    animation-delay: 5s;
+                    opacity: 0;
+                    transform: translateX(-1000px);
+                    height: calc(100vh - 92px);
                     .top_block{
-                        margin-top: 40px;
                         h1{
                             font-size: 96px;
                         }
@@ -917,5 +926,36 @@
     100%{
         transform: translate(-80px, -100px) scale(0.6);
         
+    }
+}
+
+
+@keyframes left_block {
+    0%{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+@keyframes right_block {
+    0%{
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(calc(50% - 150px));
+    }
+    70%{
+        opacity: 1;
+        transform: translateX(calc(50% - 150px));
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(0px);
     }
 }
