@@ -53,6 +53,7 @@ th {
 }
 a{
   color: #fff;
+  text-decoration: none;
 }
 ul{
   list-style: none;
@@ -70,15 +71,7 @@ button.d {
   color: #0f1511;
   border-radius: 1em;
 }
-a,
-.lnk-d {
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    color: @main-color;
-    text-decoration: underline;
-  }
-}
+
 
 label.d {
   color: lighten(@text-color, 20%);
@@ -284,6 +277,11 @@ p.error {
   outline: none;
   border: none;
   color: #000;
+  transition: 0.5s all ease;
+  cursor: pointer;
+  &:hover{
+    background-color: #c2da27;
+  }
 }
 .btn-type1{
   background-color: @common-color1;
@@ -296,6 +294,11 @@ p.error {
   outline: none;
   border: none;
   color: #000;
+  transition: 0.5s all ease;
+  cursor: pointer;
+  &:hover{
+    background-color: #c2da27;
+  }
 }
 .hide{
   display: none !important;

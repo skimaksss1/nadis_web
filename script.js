@@ -7,7 +7,7 @@ $(document).ready(function() {
 				$(this).find('.informAtr svg path').toggleClass('whiteColor'); 
 				$(this).toggleClass('borderWhite'); 
 		});
-		$(".right_content").click(function(){
+		$(".main-btn").click(function(){
 				$(this).find('.mobile_main').toggleClass('hide');
 				$(this).find('.open_close-btn').toggleClass('filter_invert');
 				$('.left_content').toggleClass('filter_invert');

@@ -154,6 +154,29 @@
             }
         }
     }
+    .additional{
+        .general_wrapper{
+            .left_content{
+                img{
+                    width: 300px;
+                }
+            }
+            .right_content{
+                padding-left: 50px !important;
+                h2{
+                    font-size: 40px !important;
+                }
+                p{
+                    font-size: 16px !important;
+                }
+            }
+        }
+        .second_wrapper{
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
 }
 @media (max-width: 1200px) {
     .whyNadis .whyNadis_wrapper{
@@ -421,6 +444,38 @@
                     font-size: 16px;
                     width: 100%;
                 }
+            }
+        }
+    }
+    .additional{
+        .general_wrapper{
+            .left_content{
+                img{
+                    width: 200px;
+                }
+            }
+            .right_content{
+                padding-left: 50px !important;
+                h2{
+                    font-size: 32px !important;
+                }
+                p{
+                    font-size: 16px !important;
+                }
+                h3{
+                    font-size: 30px !important;
+                    text-align: center;
+                }
+                ul{
+                    li{
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+        .second_wrapper{
+            p{
+                font-size: 16px !important;
             }
         }
     }
@@ -695,6 +750,99 @@
                 display: flex;
                 flex-direction:row;
                 justify-content: center;
+            }
+        }
+    }
+    .additional{
+        .general_wrapper{
+            padding-bottom: 50px !important;
+            .left_content{
+                position: relative !important;
+                top: 0 !important;
+                text-align: center;
+                width: 100%;
+                img{
+                    width: 300px;
+                    margin: 0 auto;
+                    margin-bottom: 50px;
+                }
+            }
+            .right_content{
+                padding-left: 0 !important;
+                h2{
+                    font-size: 32px !important;
+                    text-align: center;
+                }
+                h3{
+                    font-size: 30px !important;
+                    text-align: center;
+                }
+                ul{
+                    li{
+                        font-size: 16px !important;
+                    }
+                }
+                p{
+                    font-size: 16px !important;
+                    text-align: center;
+                }
+            }
+        }
+        .second_wrapper{
+            p{
+                font-size: 16px !important;
+                text-align: center;
+            }
+            ol.ui{
+                padding: 1rem 0 !important;
+                li{
+                    float: left;
+                    position: relative;
+                    width:70px !important;
+                }
+                li > span {
+                    color: #fff;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    width: 120px !important;
+                    font-weight: 600;
+                    font-size: 10px;
+                }
+                span:nth-of-type(2) {
+                    background: #c2da27;
+                    color: #000;
+                    border: 0.2rem solid rgba(black,0);
+                    border-radius: 50%;
+                    cursor: pointer; 
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    width: 50px !important;
+                    height: 50px !important;
+                    display: inline-block;
+                    line-height: 1.7;
+                    transition: all 1.2s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:before {
+                        background: rgba(black,0.4);
+                        content: ""; 
+                        height: 0.5rem;
+                        left: -2.65rem; 
+                        position: absolute;
+                        transition: all 1.2s ease-in-out;
+                        width: 0rem; 
+                    }
+                    &:after {
+                        background: rgba(rgb(109, 109, 109),0.4);
+                        content: ""; 
+                        height: 0.5rem;
+                        left: 50px !important;
+                        position: absolute;
+                        transition: all 1.2s ease-in-out;
+                        width: 50px !important; 
+                    }
+                }
             }
         }
     }

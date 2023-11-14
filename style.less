@@ -42,7 +42,7 @@
                     }
                 }
             }
-            .right_block{
+            .right_content{
                 display: none;
             }
         }
@@ -134,28 +134,187 @@
                         transform: skew(340deg, 4deg) scaley(0) scalex(0) rotate(16deg) translate(0px, -80px);
                     }
                     100%{
-                        transform: skew(340deg, 4deg) scaley(0.8) scalex(1) rotate(16deg) translate(0px, -80px);
+                        transform: skew(340deg, 4deg) scaley(0.8) scalex(1) rotate(16deg) translate(-70px, -80px);
                         
                     }
                 }
                 .basket_img{
                     position: absolute;
                     z-index: 2;
-                    transform: translate(85px, -100px) scale(0);
+                    transform: translate(25px, -120px) scale(0);
                     animation: transform_basket 3s ease forwards;
                 }
                 @keyframes transform_basket {
                     70%{
-                        transform: translate(85px, -100px) scale(0);
+                        transform: translate(25px, -120px) scale(0);
                     }
                     100%{
-                        transform: translate(85px, -100px) scale(1);
+                        transform: translate(25px, -120px) scale(1);
                         
                     }
                 }
             }
         }
     }
+    .additional{
+        .general_wrapper{
+            height: auto;
+            padding: 100px 0;
+            align-items: flex-start;
+            .left_content{
+                position: sticky;
+                top: 100px;
+            }
+            .right_content{
+                padding-left: 100px;
+                h2{
+                    font-size: 64px;
+                    font-weight: 700;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+                ul{
+                    margin-top: 20px;
+                    li{
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                        margin-left: 20px;
+                        font-weight: 700;
+                        text-indent: -28px;
+                        &::before{
+                            content: '';
+                            background-image: url(http://127.0.0.1:5500/img/real.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            width: 17px;
+                            height: 17px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+                h3{
+                    font-size: 40px;
+                    font-weight: 700;
+                    margin-top: 50px;
+                }
+                .title_ul{
+                    font-weight: 700;
+                    margin-top: 50px;
+                }
+
+
+            }
+        }
+        .second_wrapper{
+            padding-bottom: 100px;
+            .steps{
+                margin-top: 50px;
+                display: flex;
+                flex-grow: 1;
+                ol.ui {
+                    list-style: none;
+                    list-style-image: none;
+                    margin: 0 0 1rem 0;
+                    padding: 1rem 0 1rem 1rem;
+                    white-space: nowrap;
+                    
+                    li {
+                    float: left;
+                    position: relative;
+                    width: 130px;
+                    }
+                    
+                    li > span {
+                    color: #fff;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    width: 130px;
+                    font-weight: 600;
+                    }
+                    
+                    span:nth-of-type(2) {
+                        background: @common-color1;
+                        color: #000;
+                        border: 0.2rem solid rgba(black,0);
+                        border-radius: 50%;
+                        cursor: pointer; 
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        width: 80px;
+                        height: 80px;
+                        display: inline-block;
+                        line-height: 1.7;
+                        transition: all 1.2s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:before {
+                            background: rgba(black,0.4);
+                            content: ""; 
+                            height: 0.5rem;
+                            left: -2.65rem; 
+                            position: absolute;
+                            transition: all 1.2s ease-in-out;
+                            width: 0rem; 
+                        }
+                        
+                        &:after {
+                            background: rgba(rgb(109, 109, 109),0.4);
+                            content: ""; 
+                            height: 0.5rem;
+                            left: 80px;
+                            position: absolute;
+                            transition: all 1.2s ease-in-out;
+                            width: 100px; 
+                        }
+                    }
+                    
+                    li:first-of-type span:nth-of-type(2):before,
+                    li:last-of-type span:nth-of-type(2):after {
+                        display: none;
+                    }
+                    
+                    .active span:nth-of-type(2) {
+                        border: 0.2rem solid white;
+                        transition: all 1s ease-in-out;
+                        transition-delay: 0.8s;   
+                        
+                        &:before {
+                            background: white; 
+                            transition: all 1.2s ease-in-out;
+                            width: 4.35rem; 
+                        }   
+                    }  
+                    
+                    p {
+                        color: #fff;
+                        left: 50%;
+                        margin-left: -1rem;
+                        margin-top: 4.5rem;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+                }    
+            }
+            p{
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+            h3{
+                font-size: 40px;
+                font-weight: 700;
+                margin-top: 50px;
+            } 
+        }
+    }
+}
+.autoheight{
+    height: auto;
 }
 .about{
     padding: 140px 0 185px;
