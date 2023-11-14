@@ -793,55 +793,59 @@
                 font-size: 16px !important;
                 text-align: center;
             }
-            ol.ui{
-                padding: 1rem 0 !important;
-                li{
-                    float: left;
-                    position: relative;
-                    width:62px !important;
-                }
-                li > span {
-                    color: #fff;
-                    display: block;
-                    margin-bottom: 0.5rem;
-                    width: 120px !important;
-                    font-weight: 600;
-                    font-size: 10px;
-                }
-                span:nth-of-type(2) {
-                    background: #c2da27;
-                    color: #000;
-                    border: 0.2rem solid rgba(black,0);
-                    border-radius: 50%;
-                    cursor: pointer; 
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    width: 50px !important;
-                    height: 50px !important;
-                    display: inline-block;
-                    line-height: 1.7;
-                    transition: all 1.2s ease-in-out;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    &:before {
-                        background: rgba(black,0.4);
-                        content: ""; 
-                        height: 0.5rem;
-                        left: -2.65rem; 
-                        position: absolute;
-                        transition: all 1.2s ease-in-out;
-                        width: 0rem; 
+            .steps{
+                justify-content: center;
+                ol.ui{
+                    padding: 1rem 0 !important;
+                    li{
+                        float: left;
+                        position: relative;
+                        width:62px !important;
                     }
-                    &:after {
-                        background: rgba(rgb(109, 109, 109),0.4);
-                        content: ""; 
-                        height: 0.5rem;
-                        left: 50px !important;
-                        position: absolute;
-                        transition: all 1.2s ease-in-out;
-                        width: 50px !important; 
+                    li > span {
+                        color: #fff;
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        width: 120px !important;
+                        font-weight: 600;
+                        font-size: 10px;
                     }
+                    span:nth-of-type(2) {
+                        background: #c2da27;
+                        color: #000;
+                        border: 0.2rem solid rgba(black,0);
+                        border-radius: 50%;
+                        cursor: pointer; 
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        width: 50px !important;
+                        height: 50px !important;
+                        display: inline-block;
+                        line-height: 1.7;
+                        transition: all 1.2s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:before {
+                            background: rgba(black,0.4);
+                            content: ""; 
+                            height: 0.5rem;
+                            left: -2.65rem; 
+                            position: absolute;
+                            transition: all 1.2s ease-in-out;
+                            width: 0rem; 
+                        }
+                        &:after {
+                            background: rgba(rgb(109, 109, 109),0.4);
+                            content: ""; 
+                            height: 0.5rem;
+                            left: 50px !important;
+                            position: absolute;
+                            transition: all 1.2s ease-in-out;
+                            width: 50px !important; 
+                        }
+                    }
+                    
                 }
             }
         }
