@@ -930,9 +930,10 @@
             .general_wrapper{
                 .left_block{
                     .top_block{
-                        height: calc(100% - 75px);
+                        height: calc(100% - 10px);
                         h1{
                             font-size: 80px;
+                            display: none;
                         }
                         .subtitle{
                             font-size: 16px;
@@ -947,10 +948,12 @@
                         }
                     }
                     .market {
+                        display: none;
                         margin-bottom: 20px;
                     }
                 }
                 .right_block{
+                    display: none;
                     .app_img{
                         animation: transform_app_img-lndscp 2s ease forwards !important;
                     }
@@ -1067,6 +1070,7 @@
         
     }
 }
+
 
 @keyframes transform_app_img-lndscp {
     0%{
