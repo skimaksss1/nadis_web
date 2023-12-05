@@ -1,22 +1,31 @@
 $(document).ready(function() {
-	addEventListener('load',()=>setTimeout(()=>{
-		$(".informAccordion").click(function(){
-			$(this).find(".disclosure").toggle();
-			$(this).find('svg').toggleClass('rotate'); 
-			$(this).find('.informName').toggleClass('greyColor'); 
-			$(this).find('.informAtr svg path').toggleClass('whiteColor'); 
-			$(this).toggleClass('borderWhite'); 
-		});
-		$(".main-btn").click(function(){
-				$(this).find('.mobile_main').toggleClass('hide');
-				$(this).find('.open_close-btn').toggleClass('filter_invert');
-				$('.left_content').toggleClass('filter_invert');
-		});
-		$(".active_lang").click(function(){
-			$('.right_block').find(".dropdown").toggle();
-		});
-		
-	}))
+    addEventListener('load', () => setTimeout(() => {
+        let touchstartOrClick = 'ontouchstart' in window ? 'touchstart' : 'click';
+
+        $(".informAccordion").on(touchstartOrClick, function(e) {
+            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
+                $(this).find(".disclosure").toggle();
+                $(this).find('svg').toggleClass('rotate'); 
+                $(this).find('.informName').toggleClass('greyColor'); 
+                $(this).find('.informAtr svg path').toggleClass('whiteColor'); 
+                $(this).toggleClass('borderWhite'); 
+            }
+        });
+
+        $(".main-btn").on(touchstartOrClick, function(e) {
+            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
+                $(this).find('.mobile_main').toggleClass('hide');
+                $(this).find('.open_close-btn').toggleClass('filter_invert');
+                $('.left_content').toggleClass('filter_invert');
+            }
+        });
+
+        $(".active_lang").on(touchstartOrClick, function(e) {
+            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
+                $('.right_block').find(".dropdown").toggle();
+            }
+        });
+    }))
 });
 
 $("body").on('click', '[href*="#"]', function(e){
