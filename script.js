@@ -1,31 +1,35 @@
 $(document).ready(function() {
-    addEventListener('load', () => setTimeout(() => {
-        let touchstartOrClick = 'ontouchstart' in window ? 'touchstart' : 'click';
+    let isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
-        $(".informAccordion").on(touchstartOrClick, function(e) {
-            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
-                $(this).find(".disclosure").toggle();
-                $(this).find('svg').toggleClass('rotate'); 
-                $(this).find('.informName').toggleClass('greyColor'); 
-                $(this).find('.informAtr svg path').toggleClass('whiteColor'); 
-                $(this).toggleClass('borderWhite'); 
-            }
+    if (isTouchDevice) {
+        $(".informAccordion, .main-btn, .active_lang").on('click', function(e) {
+            e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
+            toggleElements($(this));
         });
+    } else {
+        $(".informAccordion, .main-btn, .active_lang").on('touchstart', function(e) {
+            e.preventDefault(); // Предотвращаем действие по умолчанию (например, скроллинг)
+        }).on('click', function(e) {
+            e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
+            toggleElements($(this));
+        });
+    }
 
-        $(".main-btn").on(touchstartOrClick, function(e) {
-            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
-                $(this).find('.mobile_main').toggleClass('hide');
-                $(this).find('.open_close-btn').toggleClass('filter_invert');
-                $('.left_content').toggleClass('filter_invert');
-            }
-        });
-
-        $(".active_lang").on(touchstartOrClick, function(e) {
-            if (e.type === 'click' || e.type === 'touchstart' && e.touches.length === 1) {
-                $('.right_block').find(".dropdown").toggle();
-            }
-        });
-    }))
+    function toggleElements(element) {
+        if (element.hasClass("informAccordion")) {
+            element.find(".disclosure").toggle();
+            element.find('svg').toggleClass('rotate'); 
+            element.find('.informName').toggleClass('greyColor'); 
+            element.find('.informAtr svg path').toggleClass('whiteColor'); 
+            element.toggleClass('borderWhite'); 
+        } else if (element.hasClass("main-btn")) {
+            element.find('.mobile_main').toggleClass('hide');
+            element.find('.open_close-btn').toggleClass('filter_invert');
+            $('.left_content').toggleClass('filter_invert');
+        } else if (element.hasClass("active_lang")) {
+            $('.right_block').find(".dropdown").toggle();
+        }
+    }
 });
 
 $("body").on('click', '[href*="#"]', function(e){
