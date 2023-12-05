@@ -1,6 +1,15 @@
 $(document).ready(function() {
     let isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
+    $(document).on(isTouchDevice ? 'touchstart' : 'click', function(event) {
+        let $target = $(event.target);
+
+        // Закрываем .dropdown, если клик был вне области .active_lang и .dropdown
+        if (!$target.closest('.active_lang').length && !$target.closest('.dropdown').length) {
+            $('.dropdown').hide();
+        }
+    });
+
     $(".informAccordion, .main-btn, .active_lang").on(isTouchDevice ? 'touchstart' : 'click', function(e) {
         e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
 
@@ -162,3 +171,30 @@ $("body").on('click', '[href*="#"]', function(e){
 
 
 
+	function translateToKazakh() {
+		const content = document.getElementById('content').innerText;
+
+		// Замени 'YOUR_API_KEY' на свой API ключ Google Translate
+		const apiKey = 'AIzaSyCxfhwYRn5AiRhsSXbrA8E7ROSl9dxZLEE';
+		const targetLanguage = 'kk'; // Код казахского языка
+
+		const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+		const data = {
+			q: content,
+			target: targetLanguage,
+		};
+
+		fetch(url, {
+			method: 'POST',
+			body: JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+		.then(response => response.json())
+		.then(result => {
+			const translatedText = result.data.translations[0].translatedText;
+			document.getElementById('content').innerText = translatedText;
+		})
+		.catch(error => console.error('Ошибка:', error));
+	}
