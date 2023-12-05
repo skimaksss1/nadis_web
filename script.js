@@ -1,35 +1,25 @@
 $(document).ready(function() {
     let isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
-    if (isTouchDevice) {
-        $(".informAccordion, .main-btn, .active_lang").on('click', function(e) {
-            e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
-            toggleElements($(this));
-        });
-    } else {
-        $(".informAccordion, .main-btn, .active_lang").on('touchstart', function(e) {
-            e.preventDefault(); // Предотвращаем действие по умолчанию (например, скроллинг)
-        }).on('click', function(e) {
-            e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
-            toggleElements($(this));
-        });
-    }
+    $(".informAccordion, .main-btn, .active_lang").on(isTouchDevice ? 'touchstart' : 'click', function(e) {
+        e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
 
-    function toggleElements(element) {
-        if (element.hasClass("informAccordion")) {
-            element.find(".disclosure").toggle();
-            element.find('svg').toggleClass('rotate'); 
-            element.find('.informName').toggleClass('greyColor'); 
-            element.find('.informAtr svg path').toggleClass('whiteColor'); 
-            element.toggleClass('borderWhite'); 
-        } else if (element.hasClass("main-btn")) {
-            element.find('.mobile_main').toggleClass('hide');
-            element.find('.open_close-btn').toggleClass('filter_invert');
+        let $element = $(this);
+
+        if ($element.hasClass("informAccordion")) {
+            $element.find(".disclosure").toggle();
+            $element.find('svg').toggleClass('rotate'); 
+            $element.find('.informName').toggleClass('greyColor'); 
+            $element.find('.informAtr svg path').toggleClass('whiteColor'); 
+            $element.toggleClass('borderWhite'); 
+        } else if ($element.hasClass("main-btn")) {
+            $element.find('.mobile_main').toggleClass('hide');
+            $element.find('.open_close-btn').toggleClass('filter_invert');
             $('.left_content').toggleClass('filter_invert');
-        } else if (element.hasClass("active_lang")) {
+        } else if ($element.hasClass("active_lang")) {
             $('.right_block').find(".dropdown").toggle();
         }
-    }
+    });
 });
 
 $("body").on('click', '[href*="#"]', function(e){
