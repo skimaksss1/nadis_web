@@ -310,6 +310,44 @@
                             top: 4px;
                         }
                     }
+                    .notification{
+                            position: relative;
+                            display: inline-block;
+                            border-bottom: 1px dotted black; /* Если вы хотите точки под текстом при наведении мыши */
+                          
+                          /* Текст подсказки */
+                          .tooltiptext {
+                            visibility: hidden;
+                            width: fit-content;
+                            background-color: @common-color1;
+                            color: #000;
+                            font-size: 16px;
+                            padding: 10px;
+                            border-radius: 10px;
+                            text-indent: 0;
+                            bottom: 100%;
+                            left: 50%;
+                            margin-left: -60px;
+                            
+                            /* Разместите текст всплывающей подсказки - см. Примеры ниже! */
+                            position: absolute;
+                            z-index: 1;
+                            &::after {
+                                content: " ";
+                                position: absolute;
+                                top: 100%; /* В нижней части всплывающей подсказки */
+                                left: 50%;
+                                margin-left: -5px;
+                                border-width: 5px;
+                                border-style: solid;
+                                border-color: @common-color1 transparent transparent transparent;
+                              }
+                        }
+                          
+                          &:hover .tooltiptext {
+                            visibility: visible;
+                          }
+                        }
                 }
                 h3{
                     font-size: 40px;
@@ -1101,6 +1139,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: flex-end;
         }
     }
     hr{
