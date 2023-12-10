@@ -10,25 +10,50 @@ $(document).ready(function() {
         }
     });
 
-    $(".informAccordion, .main-btn, .active_lang").on(isTouchDevice ? 'touchstart' : 'click', function(e) {
-        e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
-
-        let $element = $(this);
-
-        if ($element.hasClass("informAccordion")) {
-            $element.find(".disclosure").toggle();
-            $element.find('svg').toggleClass('rotate'); 
-            $element.find('.informName').toggleClass('greyColor'); 
-            $element.find('.informAtr svg path').toggleClass('whiteColor'); 
-            $element.toggleClass('borderWhite'); 
-        } else if ($element.hasClass("main-btn")) {
-            $element.find('.mobile_main').toggleClass('hide');
-            $element.find('.open_close-btn').toggleClass('filter_invert');
-            $('.left_content').toggleClass('filter_invert');
-        } else if ($element.hasClass("active_lang")) {
-            $('.right_block').find(".dropdown").toggle();
-        }
-    });
+	$(document).ready(function() {
+		let isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+	
+		$(document).on(isTouchDevice ? 'touchstart' : 'click', function(event) {
+			let $target = $(event.target);
+			// Здесь можешь добавить условие для скрытия .mobile_main, если нужно
+		});
+	
+		$(".informAccordion, .main-btn, .active_lang").on(isTouchDevice ? 'touchstart' : 'click', function(e) {
+			e.stopPropagation(); // Предотвращаем дальнейшее всплытие события
+	
+			let $element = $(this);
+	
+			if ($element.hasClass("informAccordion")) {
+				$element.find(".disclosure").toggle();
+				$element.find('svg').toggleClass('rotate'); 
+				$element.find('.informName').toggleClass('greyColor'); 
+				$element.find('.informAtr svg path').toggleClass('whiteColor'); 
+				$element.toggleClass('borderWhite'); 
+			} else if ($element.hasClass("main-btn")) {
+				let $mobileMain = $element.find('.mobile_main');
+				let $openCloseBtn = $element.find('.open_close-btn');
+	
+				if ($openCloseBtn.is(e.target) || $openCloseBtn.find(e.target).length > 0) {
+					$mobileMain.toggleClass('hide');
+					$openCloseBtn.toggleClass('filter_invert');
+					$('.left_content').toggleClass('filter_invert');
+				}
+			} else if ($element.hasClass("active_lang")) {
+				$('.right_block').find(".dropdown").toggle();
+			}
+		});
+	
+		// Изменяем обработчик для ссылок внутри .mobile_main
+		$('.mobile_main a').on('click', function(e) {
+			let href = $(this).attr('href');
+			if (href.charAt(0) === '#') {
+				e.preventDefault(); // Предотвращаем дефолтное действие ссылки
+				$('.mobile_main').addClass('hide');
+				// Если нужно, добавьте дополнительные действия
+				window.location.hash = href; // Устанавливаем якорь после скрытия .mobile_main
+			}
+		});
+	});
 });
 
 $("body").on('click', '[href*="#"]', function(e){
