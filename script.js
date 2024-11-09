@@ -223,3 +223,51 @@ $("body").on('click', '[href*="#"]', function(e){
 		})
 		.catch(error => console.error('Ошибка:', error));
 	}
+
+
+
+	$(document).ready(function () {
+		var $phone = $('#phone .phone');
+		var $phoneBg = $('#phone .phone-bg');
+		var $phoneWrap = $('#phone');
+		var width = $phone.width();
+		var height = $phone.height();
+		var mouseX = 0;
+		var mouseY = 0;
+		var mouseLeaveDelay;
+
+		function handleMouseMove(e) {
+			var offset = $phoneWrap.offset();
+			if (offset) {
+				mouseX = e.pageX - offset.left - width / 2;
+				mouseY = e.pageY - offset.top - height / 2;
+				var mousePX = mouseX / width;
+				var mousePY = mouseY / height;
+				var rX = mousePX * 20;
+				var rY = mousePY * -20;
+				$phone.css('transform', 'rotateY(' + rX + 'deg) rotateX(' + rY + 'deg)');
+			}
+		}
+
+		function handleMouseEnter() {
+			clearTimeout(mouseLeaveDelay);
+		}
+
+		function handleMouseLeave() {
+			mouseLeaveDelay = setTimeout(function () {
+				mouseX = 0;
+				mouseY = 0;
+				$phone.css('transform', 'rotateY(0deg) rotateX(0deg)');
+			}, 2000);
+		}
+
+		// Event Listeners
+		$('#phone')
+			.mousemove(handleMouseMove)
+			.mouseenter(handleMouseEnter)
+			.mouseleave(handleMouseLeave);
+
+		// Set initial background image
+		var dataImage = 'path_to_your_image.jpg'; // replace with your image path
+		$phoneBg.css('background-image', 'url(' + dataImage + ')');
+	});
