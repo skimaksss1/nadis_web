@@ -25,8 +25,9 @@ $(document).ready(function() {
 	
 			if ($element.hasClass("informAccordion")) {
 				$element.find(".disclosure").toggle();
+				// $element.find(".disclosure span").toggleClass('coloryellow');
 				$element.find('svg').toggleClass('rotate'); 
-				$element.find('.informName').toggleClass('greyColor'); 
+				$element.find('.informName').toggleClass('coloryellow'); 
 				$element.find('.informAtr svg path').toggleClass('whiteColor'); 
 				$element.toggleClass('borderWhite'); 
 			} else if ($element.hasClass("main-btn")) {
@@ -177,22 +178,22 @@ $("body").on('click', '[href*="#"]', function(e){
 	//   ease: Power2.easeInOut
 	// });
 
-	window.onmousemove = function(e) {
-		w = document.documentElement.clientWidth;
-		h = document.documentElement.clientHeight;
-		let offsetX = 0.5 - e.pageX / w;
-		let offsetY = 0.5 - e.pageY / h;
+	// window.onmousemove = function(e) {
+	// 	w = document.documentElement.clientWidth;
+	// 	h = document.documentElement.clientHeight;
+	// 	let offsetX = 0.5 - e.pageX / w;
+	// 	let offsetY = 0.5 - e.pageY / h;
 		
-		let div = document.querySelectorAll("div");
-		console.log(div.toString());
+	// 	let div = document.querySelectorAll("div");
+	// 	console.log(div.toString());
 		
-		for(let i = 0; i < div.length; i++) {
-			let data = div[i].getAttribute("data-offset");
-			data = parseInt(data);
-			let trans = "translate3d("+Math.round(offsetX*data)+"%,"+Math.round(offsetY*data)+"%, 0)";
-			div[i].style.transform = trans;
-		}
-	}
+	// 	for(let i = 0; i < div.length; i++) {
+	// 		let data = div[i].getAttribute("data-offset");
+	// 		data = parseInt(data);
+	// 		let trans = "translate3d("+Math.round(offsetX*data)+"%,"+Math.round(offsetY*data)+"%, 0)";
+	// 		div[i].style.transform = trans;
+	// 	}
+	// }
 
 
 
@@ -271,3 +272,40 @@ $("body").on('click', '[href*="#"]', function(e){
 		var dataImage = 'path_to_your_image.jpg'; // replace with your image path
 		$phoneBg.css('background-image', 'url(' + dataImage + ')');
 	});
+
+	document.addEventListener('DOMContentLoaded', function() {
+		// Функция для удаления элемента #logo
+		function removeLogo() {
+			const logo = document.getElementById('logo');
+			if (logo) {
+				logo.parentNode.removeChild(logo);
+				console.log('Логотип удален:', logo);
+			} else {
+				console.log('Элемент #logo не найден');
+			}
+		}
+	
+		// Наблюдатель для отслеживания изменений в DOM
+		const observer = new MutationObserver((mutationsList) => {
+			for (const mutation of mutationsList) {
+				for (const addedNode of mutation.addedNodes) {
+					if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.id === 'logo') {
+						removeLogo();
+					}
+					if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.querySelector('#logo')) {
+						removeLogo();
+					}
+				}
+			}
+		});
+	
+		// Начало наблюдения за документом
+		observer.observe(document.body, { childList: true, subtree: true });
+	
+		// Попытка удаления логотипа сразу после загрузки страницы
+		removeLogo();
+	
+		// Периодическая проверка наличия логотипа
+		setInterval(removeLogo, 2000);
+	});
+	

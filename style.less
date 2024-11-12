@@ -232,8 +232,8 @@
                     opacity: 0.5;
                     z-index: -5;
                     width: 75%;
-                    position: relative;
-                    right: 400px;
+                    position: absolute;
+                    right: 100px;
                 }
 
                 @keyframes transform_app_img {
@@ -326,8 +326,8 @@
                     line-height: 68px;
                 }
                 p{
-                    margin-top: 20px;
-                    font-size: 24px;
+                    margin-top: 10px;
+                    font-size: 18px;
                     text-align: left;
                     font-weight: 400;
                 }
@@ -350,8 +350,8 @@
                 ul{
                     margin-top: 20px;
                     li{
-                        font-size: 24px;
-                        margin-bottom: 30px;
+                        font-size: 18px;
+                        margin-bottom: 24px;
                         font-weight: 700;
                         list-style: none;
                         text-indent: -27px;
@@ -375,7 +375,7 @@
                             width: 17px;
                             margin-right: 10px;
                             position: relative;
-                            top: 4px;
+                            top: 0px;
                         }
                     }
                     .notification{
@@ -418,9 +418,9 @@
                         }
                 }
                 h3{
-                    font-size: 40px;
+                    font-size: 24px;
                     font-weight: 700;
-                    margin-top: 50px;
+                    margin-top: 30px;
                     text-align: left;
                 }
                 .title_ul{
@@ -429,13 +429,13 @@
                 }
 
                 .prices{
-                    width: 100%;
-                    padding: 40px 20px;
-                    margin-top: 20px;
+                    width: fit-content;
+                    padding: 20px 40px;
+                    margin-top: 40px;
                     border-radius: 20px;
-                    border: 1px solid grey;
-                    background-color: @common-color1;
-                    color: #000;
+                    border: 1px solid #E7FE55;
+                    /* background-color: #E7FE55; */
+                    color: #ffffff;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -598,7 +598,7 @@
     height: auto;
 }
 .about{
-    padding: 140px 0;
+    padding: 100px 0;
     // padding: 140px 0 185px;
     .about_wrapper {
         display: flex;
@@ -647,7 +647,7 @@
             width: 100%;
             .about_description{
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 500;
                 margin-bottom: 10px;
                 line-height: 1.2;
@@ -694,6 +694,7 @@
 }
 .whyNadis{
     padding: 50px 0;
+    padding-top: 0;
     .whyNadis_wrapper{
         padding: 50px 100px;
         background:
@@ -729,7 +730,7 @@
                 border-radius: 40px;
                 width: 100%;
                 transition: 1s all ease;
-                min-height: 290px;
+                min-height: 300px;
                 &:hover{
                     border: 1px solid @common-color1;
                     box-shadow: 0 10px 25px #00000085;
@@ -798,7 +799,7 @@
             }
             .description{
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 400;
                 line-height: 1.4;
                 margin: 20px 0;
@@ -834,7 +835,7 @@
             .description{
                 text-align: right;
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 400;
                 line-height: 1.4;
                 margin: 20px 0;
@@ -868,14 +869,14 @@
                 width: 100%;
                 .description{
                     display: block;
-                    font-size: 24px;
+                    font-size: 18px;
                     font-weight: 700;
                     line-height: 1.4;
                     margin: 20px 0;
                 }
                 .description2{
                     display: block;
-                    font-size: 24px;
+                    font-size: 18px;
                     font-weight: 400;
                     line-height: 1.4;
                     margin: 10px 0 20px;
@@ -924,21 +925,22 @@
             width: 100%;
             img{
                 display: block;
-                margin-right: auto;
+                margin-left: auto;
+                margin-right: 50px;
             }
         }
         .right_block{
             width: 100%;
             .description{
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 600;
                 line-height: 1.4;
                 margin: 10px 0 20px;
             }
             .description2{
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 300;
                 line-height: 1.4;
                 margin: 10px 0 20px;
@@ -963,7 +965,7 @@
     .informAccordion{
         border: 1px solid #565656;
         border-radius: 40px;
-        padding: 25px 50px;
+        padding: 18px 30px;
         transition: 0.5s all ease;
         margin-bottom: 20px;
         cursor: pointer;
@@ -973,7 +975,8 @@
             align-items: center;
             min-height: 35px;
             .informName{
-                font-size: 36px;
+                font-size: 20px;
+                text-transform: uppercase;
                 font-weight: 600;
             }
             .informAtr{
@@ -1144,7 +1147,7 @@
             span{
                 display: block;
                 width: 90%;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: 300;
             }
             .disclosureDate{
@@ -1193,13 +1196,13 @@
                 }
             }
             .age{
-                font-size: 24px;
+                font-size: 18px;
                 display: block;
                 margin: 20px 0;
                 font-weight: 300;
             }
             .politic{
-                font-size: 24px;
+                font-size: 18px;
                 text-decoration: underline;
                 display: block;
                 font-weight: 300;
@@ -1212,7 +1215,7 @@
                 gap: 17px;
                 margin-bottom: 30px;
                 li{
-                   font-size: 18px; 
+                   font-size: 16px; 
                 }
             }
         }
@@ -1228,7 +1231,7 @@
         width: 100%;
         border: none;
         background-color: #565656;
-        margin: 50px 0;
+        margin: 30px 0;
     }
     .social{
         display: flex;
@@ -1248,3 +1251,8 @@
 
 }
 
+
+
+.coloryellow{
+    color: #e7fe55;
+}
