@@ -308,4 +308,3 @@ $("body").on('click', '[href*="#"]', function(e){
 		// Периодическая проверка наличия логотипа
 		setInterval(removeLogo, 2000);
 	});
-	
