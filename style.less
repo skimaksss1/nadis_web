@@ -1108,7 +1108,7 @@
 
     .informAccordion {
         border: 1px solid #565656;
-        border-radius: 40px;
+        border-radius: 20px;
         padding: 18px 30px;
         transition: 0.5s all ease;
         margin-bottom: 20px;
@@ -1123,7 +1123,7 @@
             .informName {
                 font-size: 20px;
                 text-transform: uppercase;
-                font-weight: 600;
+                font-weight: 700;
             }
 
             .informAtr {
@@ -1453,7 +1453,7 @@
         padding: 60px;
         background-color: #1C1C1C;
         border-radius: 20px;
-        margin: 100px 0;
+        margin: 50px 0;
         border-left: 1px solid #424242;
         border-right: 1px solid #424242;
         border-top: 1px solid #424242;
@@ -1488,17 +1488,18 @@
             }
             .hedaer_card{
                 background-color: #1A1A1A;
-                border-radius: 20px 0 20px 20px;
+                border-radius: 20px 20px 20px 20px;
                 /* height: 500px; */
-                width: 800px;
+                width: 50%;
                 position: absolute;
                 padding: 60px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                // top: 50px;
             }
             img{
-                height: 100%;
+                width: 55%;
                 margin-left: auto;
             }
             .bonus_right{
@@ -1529,7 +1530,7 @@
                 display: flex;
                 justify-content: space-between;
                 .card{
-                    padding: 26px 37px;
+                    padding: 20px 30px;
                     color: #E7FE55;
                     font-weight: 600;
                     background-color: #252525;
@@ -1550,7 +1551,7 @@
             .advantage_cards{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 60px;
+                gap: 40px;
                 .adv_card{
                     background-color: #252525;
                     padding: 40px;
@@ -1564,6 +1565,9 @@
                         align-items: center;
                         gap: 15px;
                         margin-bottom: 25px;
+                        .icon img{
+                            width: auto;
+                        }
                         .header_span{
                             font-size: 32px;
                             color: #E7FE55;
@@ -1578,7 +1582,7 @@
             }
             .target_cards{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 60px;
                 .trg_card{
                     background-color: #252525;
@@ -1603,6 +1607,9 @@
                         font-size: 16px;
                         line-height: 1.5;
                     }
+                    .icon img{
+                        width: auto;
+                    }
                 }
             }
         }
@@ -1610,6 +1617,7 @@
             text-transform: uppercase;
             font-weight: 700;
             margin-top: 20px;
+            color: #e7fe55;
         }
         .assoc_cards{
             display: flex;
@@ -1684,7 +1692,7 @@
                 width: 50px;
                 height: 50px;
                 background-color: #E7FE55;
-                font-size: 36px;
+                font-size: 32px;
                 font-weight: 700;
                 display: flex;
                 align-items: center;
@@ -1726,7 +1734,7 @@
                 width: 50px;
                 height: 50px;
                 background-color: #E7FE55;
-                font-size: 36px;
+                font-size: 32px;
                 font-weight: 700;
                 display: flex;
                 align-items: center;
@@ -1746,7 +1754,7 @@
 }
 
 .tarif{
-    padding: 0 50px;
+    padding: 0 60px;
     .hedaer_txt{
         .text_header{
             display: block;
@@ -1768,6 +1776,7 @@
         display: flex;
         gap: 25px;
         .trf{
+            width: 100%;
             .trf_header{
                 background-color: #E7FE55;
                 border-radius: 20px;
@@ -1795,7 +1804,24 @@
 
                     }
                 }
+                .right{
+                    /* Анимация поворота стрелки */
+                    .arrow img {
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    /* Поворот на 180° при активном состоянии */
+                    .arrow.rotated img {
+                        transform: rotate(180deg);
+                    }
+                    
+                }
             }
+            /* Скрытие блока */
+            .hidden {
+                display: none;
+            }
+            
             .tarif_info{    
                 padding: 40px 20px;
                 padding-top: 50px;
@@ -1807,7 +1833,7 @@
                 ul{
                     list-style: disc;
                     margin-left: 20px;
-                    width: max-content;
+                    // width: max-content;
                     margin-bottom: 25px;
                 }
             }
