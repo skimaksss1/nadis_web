@@ -935,9 +935,6 @@
                 }
             }
         }
-        .container{
-            width: 100%;
-        }
     }
     .footer{
         .wrapper{
@@ -1133,7 +1130,42 @@
         grid-template-columns: 1fr !important;
     }
 }
-
+@media (max-width: 500px){
+    .about .about_wrapper .left_block .top_block h2 {
+        font-size: 24px;
+    }
+    .about .about_wrapper .right_block .about_description {
+        font-size: 14px;
+    }
+    .whyNadis .whyNadis_wrapper h2 {
+        font-size: 24px;
+    }
+    .container {
+        width: calc(100% - 40px);
+    }
+    .about .about_wrapper .right_block {
+        margin-top: 10px;
+    }
+    .foreach_wrapper h2 {
+        font-size: 24px !important;
+    }
+    .faq .title {
+        font-size: 24px;
+    }
+    .bonus .bonus_content {
+        padding: 20px
+    }
+    .bonus .bonus_content .bonus_flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .bonus .bonus_content .bonus_flex .bonus_right{
+        text-align: center;
+    }
+    .map svg{
+        height: 200px;
+    }
+}
 @media (max-width: 1000px) and  (max-height: 500px) {
     .btn-type1{
         padding: 10px 30px;
