@@ -35,7 +35,7 @@
     .whyNadis .whyNadis_wrapper {
         padding: 40px 50px;
         h2{
-            font-size: 54px;
+            font-size: 48px;
         }
         .why_description{
             margin-bottom: 30px;
@@ -117,7 +117,9 @@
     }
     .faq{
         .title{
-            font-size: 54px;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 800;
         }
         .informAccordion{
            .informItem .informName{
@@ -183,36 +185,54 @@
     .block_card .header_content .header_flex .text_header{
         font-size: 30px;
     }
-    .forUsers, .forPartners, .forEntrepreneurs{
-        flex-direction: column;
-        align-items: flex-start;
-        .photo{
-            display: none;
-        }
-        .text {
-            width: 100% !important;
-        }
+    .header_flex{
     }
-    .fors{
-        gap: 50px;
+    .foreach .foreach_wrapper .fors .forPartners{
+        margin: -20px 0 80px;
     }
-    .forPartners{
-        flex-direction: column-reverse;
+    .foreach .foreach_wrapper .fors .forPartners .left_line{
+        padding-left: 0;
     }
-    .foreach .foreach_wrapper .fors .forPartners, 
-    .foreach .foreach_wrapper .fors .forEntrepreneurs, 
-    .foreach .foreach_wrapper .fors .forUsers {
-        margin: 0;
-    }
-    .foreach .foreach_wrapper .fors .forUsers .left_line, .foreach .foreach_wrapper .fors .forPartners .left_line, .foreach .foreach_wrapper .fors .forEntrepreneurs .left_line,
-    .foreach .foreach_wrapper .fors .forUsers .right_line, .foreach .foreach_wrapper .fors .forPartners .right_line, .foreach .foreach_wrapper .fors .forEntrepreneurs .right_line{
-        padding: 0;
-        border: 0;
-    }
-    .foreach .foreach_wrapper .foreach_description{
-        padding: 0;
+    .foreach .foreach_wrapper .fors .forUsers .photo{
+        padding: 40px;
     }
     
+    .block_card .header_content{
+        padding: 30px;
+    }
+    .block_card .header_content .header_flex .text_body{
+        font-size: 14px;
+    }
+    .block_card .header_content .header_flex{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .tarif .tarifs .trf .tarif_info ul{
+        text-align: left;
+        line-height: 20px;
+    }
+    .tarif .tarifs .trf .tarif_info ul li{
+        margin-bottom: 10px;
+    }
+    .next_arrow img{
+        height: 20px !important;
+    }
+    .block_card .header_content .header_flex .advantage_cards .adv_card .body_span{
+        font-size: 14px;
+    }
+    .disclosure ul{
+        text-align: left;
+    }
+    .foreach_wrapper  h2{
+        font-size: 48px !important;
+    }
+    .tarif {
+        padding: 0 30px;
+        .hedaer_txt .text_header{
+            font-size: 30px;
+        }
+    }
 }
 @media (max-width: 1200px) {
     .whyNadis .whyNadis_wrapper{
@@ -222,6 +242,46 @@
                 min-height: 340px;
             }
         }
+    }
+    .block_card .header_content .header_flex .hedaer_card{
+        width: 100%;
+        padding: 40px;
+        position: relative;
+        text-align: center;
+    }
+    .hedaerPageImg{
+        // width: 35%;
+        display: none;
+    }
+    .hedaer_txt, ul{
+        width: 100% !important;
+        text-align: center;
+    }
+    .m0a{
+        margin: 0 auto;
+    }
+    .block_card .header_content .header_flex .target_cards .trg_card .header_flex .header_span{
+        font-size: 24px;
+    }
+    .block_card .header_content .header_flex .step_cards{
+        justify-content: center;
+        gap: 20px;
+        flex-flow: wrap;
+    }
+    .block_card ul{
+        list-style: none;
+    }
+    .text, .text2{
+        text-align: center;
+    }
+    .who_partners{
+        flex-direction: column;
+    }
+    .block_card .header_content .header_flex{
+        align-items: center;
+    }
+    footer .hedaer_txt, ul{
+        text-align: left;
     }
 }
 @media (max-width: 1100px) {
@@ -572,8 +632,43 @@
             padding: 20px;
         }
     }
+    .forUsers, .forPartners, .forEntrepreneurs{
+        flex-direction: column;
+        align-items: flex-start;
+        .photo{
+            display: none;
+        }
+        .text {
+            width: 100% !important;
+        }
+    }
+    .fors{
+        gap: 50px;
+    }
+    .forPartners{
+        flex-direction: column-reverse;
+    }
+    .foreach .foreach_wrapper .fors .forPartners, 
+    .foreach .foreach_wrapper .fors .forEntrepreneurs, 
+    .foreach .foreach_wrapper .fors .forUsers {
+        margin: 0;
+    }
+    .foreach .foreach_wrapper .fors .forUsers .left_line, .foreach .foreach_wrapper .fors .forPartners .left_line, .foreach .foreach_wrapper .fors .forEntrepreneurs .left_line,
+    .foreach .foreach_wrapper .fors .forUsers .right_line, .foreach .foreach_wrapper .fors .forPartners .right_line, .foreach .foreach_wrapper .fors .forEntrepreneurs .right_line{
+        padding: 0;
+        border: 0;
+    }
+    .foreach .foreach_wrapper .foreach_description{
+        padding: 0;
+    }
+    .block_card .header_content .assoc_cards .card .number{
+        font-size: 50px;
+    }
 }
 @media (max-width:768px) {
+    .about .about_wrapper .left_block .top_block{
+        width: 100%;
+    }
     .about .about_wrapper .left_block .top_block h2{
         font-size: 32px;
         text-align: center;
@@ -819,6 +914,7 @@
     }
     .faq{
         padding: 0;
+        margin-top: 50px;
         .title{
             font-size: 32px;
         }
@@ -838,6 +934,9 @@
                     width: 100%;
                 }
             }
+        }
+        .container{
+            width: 100%;
         }
     }
     .footer{
@@ -996,6 +1095,42 @@
                 }
             }
         }
+    }
+    .bonus .bonus_content{
+        margin-bottom: 20px;
+        margin-top: 80px;
+    }
+    .map {
+        padding: 0 50px 50px;
+    }
+    .block_card .header_content .header_flex .advantage_cards .adv_card .header_flex .header_span{
+        font-size: 24px;
+    }
+    .block_card .cards{
+        flex-wrap: wrap;
+    }
+    .tarif .tarifs{
+        flex-wrap: wrap;
+    }
+    .tarif .hedaer_txt .text_body{
+        margin-bottom: 20px;
+    }
+    .tarif{
+        padding: 0;
+    }
+    .trf .btn-type2 {
+        margin-left: 0;
+    }
+    .block_card .header_content .assoc_cards{
+        flex-direction: column;
+        text-align: center;
+    }
+    .additiona .header_content{
+        display: flex;
+        flex-direction: column;
+    }
+    .target_cards{
+        grid-template-columns: 1fr !important;
     }
 }
 
