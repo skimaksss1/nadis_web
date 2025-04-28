@@ -619,10 +619,12 @@
         }
     }
     .bonus .bonus_content .bonus_flex{
-        align-items: center;
-        .bonus_left{
-            height: 85px;
-        }
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        // .bonus_left{
+        //     height: 85px;
+        // }
     }
     .block_card {
         .header_content{
@@ -1155,10 +1157,6 @@
     .bonus .bonus_content {
         padding: 20px
     }
-    .bonus .bonus_content .bonus_flex{
-        flex-direction: column;
-        gap: 20px;
-    }
     .bonus .bonus_content .bonus_flex .bonus_right{
         text-align: center;
     }
@@ -1205,6 +1203,15 @@
     }
     .footer .right_block{
         flex-direction: row !important;
+    }
+    
+    .bonus .bonus_content .bonus_flex{
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .foreach .foreach_wrapper .fors .forUsers .text .text_header, .foreach .foreach_wrapper .fors .forPartners .text .text_header, .foreach .foreach_wrapper .fors .forEntrepreneurs .text .text_header{
+        margin: 0 auto;
     }
 }
 @media (max-width: 1000px) and  (max-height: 500px) {
