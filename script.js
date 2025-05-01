@@ -64,23 +64,6 @@ $("body").on('click', '[href*="#"]', function(e){
   });
 
 
-  function onEntry(entry) {
-	entry.forEach(change => {
-		if (change.isIntersecting) {
-		change.target.classList.add('element-show');
-		}
-	});
-	}
-
-	let options = {
-	threshold: [0.25] };
-	let observer = new IntersectionObserver(onEntry, options);
-	let elements = document.querySelectorAll('.element-animation');
-
-	for (let elm of elements) {
-	observer.observe(elm);
-	}
-
 
 
 
@@ -122,41 +105,41 @@ $("body").on('click', '[href*="#"]', function(e){
 
 	
 
-	let viewHeight = window.innerHeight;
-	let viewWidth = window.innerWidth;
+	// let viewHeight = window.innerHeight;
+	// let viewWidth = window.innerWidth;
 
-	let textContainers = document.querySelectorAll('.text-container');
+	// let textContainers = document.querySelectorAll('.text-container');
 
-	textContainers.forEach((element, index) => {
-	let top = element.getBoundingClientRect().top;
-	let start = 0;
+	// textContainers.forEach((element, index) => {
+	// let top = element.getBoundingClientRect().top;
+	// let start = 0;
 
-	let firstText = element.querySelector('.parallax-text:first-child');
-	let secondText = element.querySelector('.parallax-text:last-child');
+	// let firstText = element.querySelector('.parallax-text:first-child');
+	// let secondText = element.querySelector('.parallax-text:last-child');
 
-	gsap.to(firstText, {
-		scrollTrigger: {
-		trigger: element,
-		scrub: true,
-		start: start + "px bottom",
-		end: "bottom top"
-		},
-		x: '-20vw',
-		transformOrigin: "left center", 
-		ease: "none"
-	});
-	gsap.to(secondText, {
-		scrollTrigger: {
-		trigger: element,
-		scrub: true,
-		start: start + "px bottom",
-		end: "bottom top"
-		},
-		x: '40vw',
-		transformOrigin: "left center", 
-		ease: "none"
-	});
-	});
+	// gsap.to(firstText, {
+	// 	scrollTrigger: {
+	// 	trigger: element,
+	// 	scrub: true,
+	// 	start: start + "px bottom",
+	// 	end: "bottom top"
+	// 	},
+	// 	x: '-20vw',
+	// 	transformOrigin: "left center", 
+	// 	ease: "none"
+	// });
+	// gsap.to(secondText, {
+	// 	scrollTrigger: {
+	// 	trigger: element,
+	// 	scrub: true,
+	// 	start: start + "px bottom",
+	// 	end: "bottom top"
+	// 	},
+	// 	x: '40vw',
+	// 	transformOrigin: "left center", 
+	// 	ease: "none"
+	// });
+	// });
 
 	// // for presentation
 	// let tl = gsap.timeline({
