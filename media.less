@@ -185,8 +185,6 @@
     .block_card .header_content .header_flex .text_header{
         font-size: 30px;
     }
-    .header_flex{
-    }
     .foreach .foreach_wrapper .fors .forPartners{
         margin: -20px 0 80px;
     }
@@ -196,7 +194,6 @@
     .foreach .foreach_wrapper .fors .forUsers .photo{
         padding: 40px;
     }
-    
     .block_card .header_content{
         padding: 30px;
     }
@@ -271,9 +268,6 @@
     .block_card ul{
         list-style: none;
     }
-    .text, .text2{
-        // text-align: center;
-    }
     .who_partners{
         flex-direction: column;
     }
@@ -298,6 +292,19 @@
         margin: 10px auto !important;
     }
     .total_flex{
+        flex-direction: column;
+    }
+    .grid_auto4{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    .grid_auto6{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px;
+    }
+    .tarifs{
         flex-direction: column;
     }
 }
@@ -1178,6 +1185,21 @@
     .bonus .bonus_content .bonus_flex .bonus_right img{
         display: none;
     }
+    .grid_auto6{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    .steps, .steps2{
+        flex-wrap: wrap;
+        margin-top: 10px !important;
+        .line{
+            display: none;
+        }
+        .step{
+            width: 100% !important;
+        }
+    }
 }
 @media (max-width: 500px){
     .about .about_wrapper .left_block .top_block h2 {
@@ -1218,16 +1240,8 @@
     }
     .block_card .cards {
         margin-top: 20px;
-    }
-    .steps, .steps2{
-        flex-wrap: wrap;
-        margin-top: 10px !important;
-        .line{
-            display: none;
-        }
-        .step{
-            width: 100% !important;
-        }
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 20px;
     }
     .tarif .hedaer_txt .text_header {
         font-size: 24px;
@@ -1250,8 +1264,7 @@
     }
     .footer .right_block{
         flex-direction: row !important;
-    }
-    
+    }  
     .bonus .bonus_content .bonus_flex{
         align-items: center;
         flex-direction: column;

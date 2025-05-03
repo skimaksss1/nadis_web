@@ -1562,6 +1562,18 @@
                     font-size: 18px;
                     font-weight: 700;
                 }
+                .level_card{
+                    background-color: #fff;
+                    color: #242424;
+                    padding: 10px 20px;
+                    position: relative;
+                    border-radius: 20px;
+                    font-weight: 400;
+                    top: -10px;
+                    /* transform: scaleY(0.7); */
+                    font-size: 14px;
+                    font-weight: 700;
+                }
                 .text_card{
                     background-color: #252525;
                     color: #fff;
@@ -1883,19 +1895,29 @@
             }
         }
     }
+    .grid_auto4{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .grid_auto6{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+    }
     .steps{
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 20px;
         margin-top: 50px;
         .line{
             height: 4px;
-            width: 80%;
+            width: 84%;
             position: absolute;
             background-color: #E7FE55;
             top: 22px;
-            margin: 0 auto;
+            margin: 0 8%;
         }
         .step{
             z-index: 2;
@@ -1928,16 +1950,16 @@
     .steps2{
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 20px;
         margin-top: 50px;
         .line{
             height: 4px;
-            width: 75%;
+            width: 86%;
             position: absolute;
             background-color: #E7FE55;
             top: 22px;
-            margin: 0 auto;
+            margin: 0 7%;
         }
         .step{
             z-index: 2;
@@ -2009,6 +2031,7 @@
                     display: flex;
                     gap: 10px;
                     .txt{
+                        // padding-right: ;
                     }
                     .trf_name{
                         font-size: 17px;
@@ -2019,7 +2042,28 @@
                         font-size: 27px;
                         font-weight: 700;
                         text-wrap-mode: nowrap;
+                        span{
+                            font-size: 14px;
+                            text-decoration: line-through;
+                            opacity: 0.5;
+                            vertical-align: text-top;
+                        }
 
+                    }
+                    .sale{
+                        background-color: red;
+                        color: #ffffff;
+                        font-weight: 800;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        top: -20px;
+                        right: -20px;
                     }
                 }
                 .right{
