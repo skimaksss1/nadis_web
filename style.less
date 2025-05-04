@@ -164,6 +164,7 @@
                         font-weight: 300;
                         line-height: 1.4;
                         margin-top: 20px;
+                        margin-bottom: 10px;
                     }
 
                     .btn-type1 {
@@ -1447,7 +1448,19 @@
     color: #e7fe55;
 }
 
-
+.register_sum{
+    background-color: transparent;
+    border: 1px solid #E7FE55;
+    border-radius: 10px;
+    padding: 9px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    outline: none;
+    /* border: none; */
+    color: #ffffff;
+}
 .general_block{
     .download_btn{
         margin-top: 10px;
@@ -2058,7 +2071,7 @@
                         text-transform: uppercase;
                     }
                     .sum{
-                        font-size: 27px;
+                        font-size: 24px;
                         font-weight: 700;
                         text-wrap-mode: nowrap;
                         span{
@@ -2177,4 +2190,42 @@
 }
 .hedaerPageImg{
     border-radius: 20px;
+}
+.about_info{
+    .text_header{
+        display: block;
+        color: #E7FE55;
+        font-weight: 800;
+        font-size: 32px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .table{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 20px;
+        .left, .right{
+            padding: 15px 20px;
+            border: 1px solid #565656;
+        }
+        .left{
+            background-color: #252525;
+            font-weight: 600;
+            &:nth-child(1){
+                border-radius: 20px 0 0 0;
+            }
+            &:nth-child(17){
+                border-radius: 0 0 0 20px;
+            }
+        }
+        .right{
+            &:nth-child(18){
+                border-radius: 0 0 20px 0;
+            }
+            &:nth-child(2){
+                border-radius: 0 20px 0 0;
+            }
+        }
+    }
 }
