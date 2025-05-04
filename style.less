@@ -2112,10 +2112,17 @@
                 z-index: 0;
                 border-radius: 20px;
                 ul{
-                    list-style: disc;
-                    margin-left: 20px;
+                    list-style: none;
+                    // margin-left: 20px;
                     // width: max-content;
                     margin-bottom: 25px;
+                    li{
+                        padding: 5px 0;
+                        border-bottom: 1px solid #353535;
+                        &:nth-last-child(1){
+                            border-bottom:  none;
+                        }
+                    }
                 }
             }
         }
