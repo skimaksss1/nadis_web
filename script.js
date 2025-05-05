@@ -291,14 +291,16 @@ $("body").on('click', '[href*="#"]', function(e){
 		// Периодическая проверка наличия логотипа
 		setInterval(removeLogo, 2000);
 	});
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('.trf').forEach(function (trfBlock) {
-      const arrow = trfBlock.querySelector('.arrow');
-      const tarifInfo = trfBlock.querySelector('.tarif_info');
 
-      arrow.addEventListener('click', function () {
-        tarifInfo.classList.toggle('hidden');       // скрыть/показать блок
-        arrow.classList.toggle('rotated');          // повернуть стрелку
-      });
-    });
-  });
+	
+	document.addEventListener("DOMContentLoaded", function () {
+		document.querySelectorAll('.trf').forEach(function (trfBlock) {
+		const arrow = trfBlock.querySelector('.trf_header');
+		const tarifInfo = trfBlock.querySelector('.tarif_info');
+
+		arrow.addEventListener('click', function () {
+			tarifInfo.classList.toggle('hidden');       // скрыть/показать блок
+			arrow.classList.toggle('rotated');          // повернуть стрелку
+		});
+		});
+	});
